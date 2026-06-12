@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'DM Sans', 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-white text-dark;
+  }
+
+  * {
+    @apply border-brand-muted;
+  }
+
+  /* Scrollbar global */
+  ::-webkit-scrollbar        { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track  { @apply bg-brand-surface; }
+  ::-webkit-scrollbar-thumb  { @apply bg-brand-subtle rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-dark-600; }
+}
+
+@layer components {
+  /* ── Botones ─────────────────────────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-red text-white font-body font-semibold
+           px-6 py-3 rounded-xl
+           shadow-red-btn
+           transition-all duration-250
+           hover:bg-red-hover hover:shadow-none hover:-translate-y-px
+           active:translate-y-0 active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2
+           bg-dark text-white font-body font-semibold
+           px-6 py-3 rounded-xl
+           shadow-dark-btn
+           transition-all duration-250
+           hover:bg-dark-700 hover:shadow-none hover:-translate-y-px
+           active:translate-y-0 active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-dark text-dark font-body font-semibold
+           px-6 py-3 rounded-xl bg-transparent
+           transition-all duration-250
+           hover:bg-dark hover:text-white
+           active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           text-dark-600 font-body font-medium
+           px-4 py-2 rounded-lg bg-transparent
+           transition-all duration-200
+           hover:bg-brand-surface hover:text-dark;
+  }
+
+  /* ── Tarjeta base ────────────────────────────────────────────────────── */
+  .card {
+    @apply bg-brand-white rounded-2xl shadow-card border border-brand-muted
+           transition-all duration-350
+           hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  /* ── Badge ───────────────────────────────────────────────────────────── */
+  .badge-sale {
+    @apply inline-flex items-center
+           bg-red text-white text-xs font-body font-bold
+           px-2 py-0.5 rounded-md tracking-wide;
+  }
+
+  .badge-category {
+    @apply inline-flex items-center
+           bg-brand-surface text-dark-600 text-xs font-body font-medium
+           px-2.5 py-1 rounded-lg border border-brand-muted;
+  }
+
+  /* ── Input ───────────────────────────────────────────────────────────── */
+  .input-base {
+    @apply w-full bg-brand-surface border border-brand-muted rounded-xl
+           px-4 py-3 text-dark placeholder-brand-subtle
+           font-body text-sm
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-red/30 focus:border-red;
+  }
+
+  /* ── Precio ──────────────────────────────────────────────────────────── */
+  .price-main {
+    @apply font-mono font-medium text-dark text-xl;
+  }
+
+  .price-original {
+    @apply font-mono text-brand-subtle text-sm line-through;
+  }
+
+  /* ── Skeleton loader ─────────────────────────────────────────────────── */
+  .skeleton-box {
+    @apply skeleton rounded-xl;
+  }
+
+  /* ── Section title ───────────────────────────────────────────────────── */
+  .section-title {
+    @apply font-display font-bold text-dark uppercase tracking-wide;
+  }
+}
+
+@layer utilities {
+  /* Stagger animation delays para grillas */
+  .delay-75  { animation-delay: 75ms; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
