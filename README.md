@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![TiendaTech Banner](https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=1200&q=80)
+
 
 **E-Commerce profesional full-stack dedicado a la venta de periféricos y componentes de hardware gamer.**
 Teclados mecánicos, mouses, monitores, auriculares y PCs de alto rendimiento.
